@@ -14,13 +14,13 @@ def is_enabled(value, default):
     
 # Main
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '22421060'))
+API_HASH = environ.get('API_HASH', '46a62f7ff38bbe266a4a8dc07770653e')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 PORT = environ.get('PORT', '8082')
 
 # Owners 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5672857559').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5369057382').split()]
 OWNER_USERNAME = environ.get('OWNER_USERNAME', 'IM_JISSHU') # without @ or https://t.me/ 
 USERNAME = environ.get('USERNAME', "") # ADMIN USERNAME
 
@@ -28,19 +28,19 @@ USERNAME = environ.get('USERNAME', "") # ADMIN USERNAME
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 
 # ForceSub Channel & Log Channels
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', ''))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', ''))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '')) 
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', ''))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1001728907275'))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1001728907275'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002069633417'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002069633417')) 
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002069633417'))
 
 # MongoDB 
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mongodb703:mongodb703@cluster0.78sqf.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 
 # Files index database url
-FILES_DATABASE = environ.get('FILES_DATABASE', "")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'jisshu')
+FILES_DATABASE = environ.get('FILES_DATABASE', "TechLEVi")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
 # Other Channel's
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001864434358'))
@@ -50,20 +50,20 @@ REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1001864434358')) 
 
 # Added Link Here Not Id 
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-1001900557476')
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+XWgCtRH6fnQyYjI1')
 
 # Verification
-IS_VERIFY = is_enabled('IS_VERIFY', False)
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
+IS_VERIFY = is_enabled('IS_VERIFY', True)
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/moviee_group_0/3500316")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
-SHORTENER_API = environ.get("SHORTENER_API", "fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'linkmonetizer.in')
+SHORTENER_API = environ.get("SHORTENER_API", "0efb6a1a544567f7b967bb3e275b2c0c1092c818")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'Tfushorty.com')
 SHORTENER_API2 = environ.get("SHORTENER_API2", "fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'linkmonetizer.in')
-SHORTENER_API3 = environ.get("SHORTENER_API3", "fcee6bbc628cfc61229a2d808e1b0ee3315a0f5e")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'Adrinolinks.in')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "adb322ce630e0314dbfe3a1a3e8e95c8f4c47420")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'linkmonetizer.in')
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
@@ -86,9 +86,9 @@ REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
 #Other Funtions
 FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
-IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', False)
+IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', True)
 IS_SEND_MOVIE_UPDATE = is_enabled('IS_SEND_MOVIE_UPDATE', False) # Don't Change It ( If You Want To Turn It On Then Turn It On By Commands) We Suggest You To Make It Turn Off If You Are Indexing Files First Time.
-MAX_BTN = int(environ.get('MAX_BTN', '8'))
+MAX_BTN = int(environ.get('MAX_BTN', '9'))
 AUTO_DELETE = is_enabled('AUTO_DELETE', True)
 DELETE_TIME = int(environ.get('DELETE_TIME', 1200))
 IMDB = is_enabled('IMDB', False)
@@ -101,13 +101,13 @@ LINK_MODE = is_enabled('LINK_MODE', True)
 TMDB_API_KEY = environ.get("TMDB_API_KEY", "")
 
 # Online Streaming And Download 
-STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or Flase
+STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or Flase
 
 MULTI_CLIENT = False
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 if 'DYNO' in environ:
-    ON_HEROKU = True
+    ON_HEROKU = False
 else:
     ON_HEROKU = False
 URL = environ.get("FQDN", "")
