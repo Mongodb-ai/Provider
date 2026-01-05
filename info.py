@@ -21,8 +21,8 @@ PORT = environ.get('PORT', '8082')
 
 # Owners 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5369057382').split()]
-OWNER_USERNAME = environ.get('OWNER_USERNAME', 'IM_JISSHU') # without @ or https://t.me/ 
-USERNAME = environ.get('USERNAME', "") # ADMIN USERNAME
+OWNER_USERNAME = environ.get('OWNER_USERNAME', 'Princeny4') # without @ or https://t.me/ 
+USERNAME = environ.get('USERNAME', "@Princeny4") # ADMIN USERNAME
 
 # Database Channel 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002249653012').split()]
@@ -39,7 +39,7 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mongodb703:mongodb703@
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 
 # Files index database url
-FILES_DATABASE = environ.get('FILES_DATABASE', "TechLEVi")
+FILES_DATABASE = environ.get('FILES_DATABASE', "techvjclonefilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
 # Other Channel's
