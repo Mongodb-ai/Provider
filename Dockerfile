@@ -1,17 +1,19 @@
-FROM python:3.10.8-slim-buster
+FROM python:3.10-slim
 
-# Installing system dependencies (including git)
-RUN apt-get update && apt-get install -y git
+# System updates and git installation
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
-# Installing python dependencies
-COPY requirements.txt /requirements.txt
-RUN pip3 install -U pip && pip3 install -U -r /requirements.txt
-
-# Setting up workspace
-RUN mkdir /bot
+# Working directory setup
 WORKDIR /bot
-COPY . /bot
+COPY requirements.txt .
 
-# Starting the bot
-CMD ["/bin/bash", "start.sh"]
+# Installing python libraries
+RUN pip install --no-cache-dir -U pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copying all files
+COPY . .
+
+# Start command
+CMD ["bash", "start.sh"]
 
