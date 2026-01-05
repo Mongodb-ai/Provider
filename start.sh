@@ -1,12 +1,8 @@
-if [ -z $UPSTREAM_REPO ]
-then
-  echo "Cloning main Repository"
-  git clone https://github.com/Jisshu-bots/Jisshu-filter-bot /Jisshu-filter-bot
+if [ -z "$UPSTREAM_REPO" ]; then
+  echo "Starting Bot..."
+  python3 bot.py
 else
-  echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Jisshu-filter-bot
+  echo "Upstream Repo Detected, but skipping clone to avoid errors..."
+  python3 bot.py
 fi
-cd /Edith-JFBdec
-pip3 install -U -r requirements.txt
-echo "Starting Jisshu filter bot...."
-python3 bot.py
+
