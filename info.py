@@ -25,7 +25,7 @@ OWNER_USERNAME = environ.get('OWNER_USERNAME', 'IM_JISSHU') # without @ or https
 USERNAME = environ.get('USERNAME', "") # ADMIN USERNAME
 
 # Database Channel 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002249653012').split()]
 
 # ForceSub Channel & Log Channels
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1001728907275'))
