@@ -1,5 +1,5 @@
 pyrogram==2.0.106
-pyrofork==2.3.69
+Pyrofork==2.3.45
 tgcrypto 
 pymongo[srv]==4.5.0 
 motor==3.3.2
@@ -49,5 +49,6 @@ pyromod
 colorama
 
 telegraph 
+
 
 
