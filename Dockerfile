@@ -15,5 +15,4 @@ RUN pip install --no-cache-dir -U pip && \
 COPY . .
 
 # Start command
-CMD ["bash", "start.sh"]
-
+CMD ["bash", "bot.py"]
